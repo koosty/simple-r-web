@@ -1,0 +1,6 @@
+FROM r-base
+MAINTAINER Kustian <kustian@mitrais.com>
+
+RUN R -e "install.packages('shiny', verbose = TRUE)"
+COPY app /app
+CMD ["Rscript", "/app/shiny.R"]

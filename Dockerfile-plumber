@@ -1,0 +1,6 @@
+FROM trestletech/plumber
+MAINTAINER Kustian <kustian@mitrais.com>
+
+RUN R -e "install.packages('Rook')"
+COPY app /app
+CMD ["/app/plumber.R"]
